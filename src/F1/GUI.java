@@ -1,6 +1,11 @@
 package F1;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class GUI extends JFrame {
 
@@ -45,10 +50,90 @@ public GUI(){
 
     tabbedPane.setFocusable(false);
 
-    //add add button
+    //after adding the + button: we could need a delete tab function, so we add a mouse listener for that
+    //decided to choose to press the right mouse button to enter a popup sub menue for a delete func.
+
+    tabbedPane.addMouseListener(new MouseListener() {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            //need a if to have the function only on the right button
+            if(SwingUtilities.isRightMouseButton(e)) {
+
+                int index = tabbedPane.getSelectedIndex();
+
+                //safe the add button from delete
+                if (index != 0) {
+                    JPopupMenu popupMenu = new JPopupMenu();
+                    JMenuItem delete = new JMenuItem("Delete");
+                    delete.addActionListener(new ActionListener() {
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            tabbedPane.remove(index);
+                        }
+                    });
+                    popupMenu.add(delete);
+                    popupMenu.show(window, e.getX(), e.getY());
+                }
+            }
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+    });
+
+
+
+
+    //create button +
     JButton addButton =new JButton("+");
+    //style
+    addButton.setBorder(null);
+    addButton.setFocusPainted(false);
+    addButton.setContentAreaFilled(false);
+    addButton.setPreferredSize(new Dimension(25,25));
+    //set action listener
+    addButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            //edit and set input dialog
+            UIManager.put("OptionPane.okButtonText","Ok");
+            UIManager.put("OptionPane.cancelButtonText","Cancel");
+            String tabName = JOptionPane.showInputDialog(null,"Please Enter Season Name","NEW SEASON", JOptionPane.INFORMATION_MESSAGE);
+            //shitty if function for cancel i like
+            if (tabName!=null){
+                JLabel tabTitelLabel =new JLabel(tabName);
+                JTextArea textArea =new JTextArea();
+
+                tabbedPane.addTab(tabName,textArea);
+                tabbedPane.setTabComponentAt(tabbedPane.getTabCount()-1,tabTitelLabel);
+            }
+        }
+    });
+
+
+
+    //add add button
     tabbedPane.addTab("",null);
     tabbedPane.setTabComponentAt(0,addButton);
+
 
 
     //add tabpane on window
