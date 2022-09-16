@@ -12,14 +12,16 @@ public class GUI extends JFrame {
 public GUI(){
     //window
     JFrame window =new JFrame();
-    setTitle("F1");
+    window.setTitle("F1 Crossplay Season Manager");
     window.setSize(1024,768);
     window.setDefaultCloseOperation(EXIT_ON_CLOSE);
     window.setLocationRelativeTo(null);
     window.setResizable(true);
 
     //tab pane
-    JTabbedPane tabbedPane=new JTabbedPane();
+    JTabbedPane tabbedOuterPane =new JTabbedPane();
+
+
 //_______________________________________________first test_____________________________________________________________
 /*
 // first tab
@@ -48,12 +50,12 @@ public GUI(){
 //_____________________________________________end first test___________________________________________________________
     //setting up to make a add and remove tab bar, starting with making it not focusable
 
-    tabbedPane.setFocusable(false);
+    tabbedOuterPane.setFocusable(false);
 
     //after adding the + button: we could need a delete tab function, so we add a mouse listener for that
     //decided to choose to press the right mouse button to enter a popup sub menue for a delete func.
 
-    tabbedPane.addMouseListener(new MouseListener() {
+    tabbedOuterPane.addMouseListener(new MouseListener() {
         @Override
         public void mouseClicked(MouseEvent e) {
 
@@ -64,7 +66,7 @@ public GUI(){
             //need a if to have the function only on the right button
             if(SwingUtilities.isRightMouseButton(e)) {
 
-                int index = tabbedPane.getSelectedIndex();
+                int index = tabbedOuterPane.getSelectedIndex();
 
                 //safe the add button from delete
                 if (index != 0) {
@@ -73,7 +75,7 @@ public GUI(){
                     delete.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            tabbedPane.remove(index);
+                            tabbedOuterPane.remove(index);
                         }
                     });
                     popupMenu.add(delete);
@@ -119,11 +121,34 @@ public GUI(){
             String tabName = JOptionPane.showInputDialog(null,"Please Enter Season Name","NEW SEASON", JOptionPane.INFORMATION_MESSAGE);
             //shitty if function for cancel i like
             if (tabName!=null){
-                JLabel tabTitelLabel =new JLabel(tabName);
-                JTextArea textArea =new JTextArea();
+                JLabel tabTitelLabel = new JLabel(tabName);
+                JTabbedPane tabbedinnerPane=new JTabbedPane(JTabbedPane.LEFT);
+                JLabel overviewLabel =new JLabel("Overview");
+                JTextArea overviewTextArea=new JTextArea();
+                JLabel driverLabel =new JLabel("driver");
+                JTextArea driverTextArea=new JTextArea();
+                JLabel teamLabel =new JLabel("Teams");
+                JTextArea teamTextArea=new JTextArea();
+                JLabel trackLabel =new JLabel("Tracks");
+                JTextArea trackTextArea=new JTextArea();
 
-                tabbedPane.addTab(tabName,textArea);
-                tabbedPane.setTabComponentAt(tabbedPane.getTabCount()-1,tabTitelLabel);
+
+                tabbedinnerPane.addTab("",overviewTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
+                tabbedinnerPane.addTab("",overviewTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
+                tabbedinnerPane.addTab("",overviewTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
+                tabbedinnerPane.addTab("",overviewTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
+                tabbedinnerPane.addTab("",driverTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,driverLabel);
+
+
+
+                tabbedOuterPane.addTab(tabName,tabbedinnerPane);
+                tabbedOuterPane.setTabComponentAt(tabbedOuterPane.getTabCount()-1,tabTitelLabel);
+
             }
         }
     });
@@ -131,13 +156,13 @@ public GUI(){
 
 
     //add add button
-    tabbedPane.addTab("",null);
-    tabbedPane.setTabComponentAt(0,addButton);
+    tabbedOuterPane.addTab("",null);
+    tabbedOuterPane.setTabComponentAt(0,addButton);
 
 
 
     //add tabpane on window
-    window.add(tabbedPane);
+    window.add(tabbedOuterPane);
     window.setVisible(true);
 
 

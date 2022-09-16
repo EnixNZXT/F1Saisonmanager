@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/src/F1/DRIVER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/DRIVER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/F1/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
