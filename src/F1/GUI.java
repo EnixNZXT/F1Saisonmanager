@@ -101,6 +101,32 @@ public GUI(){
     });
 
 
+    //declare tables
+    Object[][] driverData = new Object[][] {
+            { "Lewis Hamilton", "Mercedes", "44","0" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","45" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+            { "Lando Norris", "Mclaren", "4","12" },
+    };
+    String[] driverColumnNames = new String[]  { "Fahrer Name", "Team Name", "Startnummer","Points"};
+
+
 
 
     //create button +
@@ -124,25 +150,39 @@ public GUI(){
                 JLabel tabTitelLabel = new JLabel(tabName);
                 JTabbedPane tabbedinnerPane=new JTabbedPane(JTabbedPane.LEFT);
                 JLabel overviewLabel =new JLabel("Overview");
+                overviewLabel.setPreferredSize(new Dimension(75,25));
                 JTextArea overviewTextArea=new JTextArea();
-                JLabel driverLabel =new JLabel("driver");
-                JTextArea driverTextArea=new JTextArea();
+
+                JLabel driverLabel =new JLabel("Driver");
+                driverLabel.setPreferredSize(new Dimension(75,25));
+
+
+
+                JTable driverTable = new JTable(driverData,driverColumnNames);
+                driverTable.setBounds(30,40,200,300);
+                JScrollPane driverPanel=new JScrollPane();
+                driverPanel.add(driverTable);
+
+
+
+
+
                 JLabel teamLabel =new JLabel("Teams");
+                teamLabel.setPreferredSize(new Dimension(75,25));
                 JTextArea teamTextArea=new JTextArea();
                 JLabel trackLabel =new JLabel("Tracks");
+                trackLabel.setPreferredSize(new Dimension(75,25));
                 JTextArea trackTextArea=new JTextArea();
 
 
                 tabbedinnerPane.addTab("",overviewTextArea);
                 tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
-                tabbedinnerPane.addTab("",overviewTextArea);
-                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
-                tabbedinnerPane.addTab("",overviewTextArea);
-                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
-                tabbedinnerPane.addTab("",overviewTextArea);
-                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,overviewLabel);
-                tabbedinnerPane.addTab("",driverTextArea);
+                tabbedinnerPane.addTab("", driverPanel);
                 tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,driverLabel);
+                tabbedinnerPane.addTab("",teamTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,teamLabel);
+                tabbedinnerPane.addTab("",trackTextArea);
+                tabbedinnerPane.setTabComponentAt(tabbedinnerPane.getTabCount()-1,trackLabel);
 
 
 
