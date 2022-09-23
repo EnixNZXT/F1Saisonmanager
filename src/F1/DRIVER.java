@@ -15,10 +15,9 @@ public class DRIVER {
 
     //Konstruktor
     public DRIVER(String fahrerVorname, String fahrerNachname, int fahrerPunkte, int fahrerNummer){
-        this.fahrerID = fahrerID;
         this.fahrerVorname = fahrerVorname;
         this.fahrerNachname = fahrerNachname;
-        this.fahrerPunkte = fahrerPunkte;
+        DRIVER.fahrerPunkte = fahrerPunkte;
         this.fahrerNummer = fahrerNummer;
     }
 
@@ -37,7 +36,7 @@ public class DRIVER {
     }
 
     public void setFahrerPunkte(int fahrerPunkte) {
-        this.fahrerPunkte = fahrerPunkte;
+        DRIVER.fahrerPunkte = fahrerPunkte;
     }
 
     public void setFahrerNummer(int fahrerNummer) {
@@ -87,6 +86,7 @@ public class DRIVER {
 
             driver[i - 1] = new DRIVER(vornameFahrer, nachnameFahrer, fahrerPunkte, fahrerNummer);
         }
+
         System.out.println(java.util.Arrays.toString(driver));
    }
 
