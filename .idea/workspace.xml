@@ -4,7 +4,7 @@
     <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="eddit submenue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/F1/DRIVER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/DRIVER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/F1/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/F1/POINTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/POINTS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663320383536</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eddit submenue">
+      <created>1663923017169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663923017169</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

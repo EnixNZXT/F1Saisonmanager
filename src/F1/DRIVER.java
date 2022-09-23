@@ -79,8 +79,9 @@ public class DRIVER {
             String vornameFahrer = scanner.next();
             System.out.println("Nachname von Fahrer " + i + ":");
             String nachnameFahrer = scanner.next();
-            System.out.println("Die Fahrerpunkte werden am Anfang auf 0 gesetzt");
+
             fahrerPunkte = 0;
+
             System.out.println("Fahrernummer von Fahrer " + i + ":");
             int fahrerNummer = scanner.nextInt();
 
