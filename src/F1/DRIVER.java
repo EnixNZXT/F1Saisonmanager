@@ -6,33 +6,22 @@ import java.util.Scanner;
 
 public class DRIVER {
     static Scanner scanner = new Scanner(System.in);
-    int fahrerID;
-    String fahrerVorname;
-    String fahrerNachname;
+    String fahrerName;
     static int fahrerPunkte;
     int fahrerNummer;
 
 
     //Konstruktor
-    public DRIVER(String fahrerVorname, String fahrerNachname, int fahrerPunkte, int fahrerNummer){
-        this.fahrerVorname = fahrerVorname;
-        this.fahrerNachname = fahrerNachname;
+    public DRIVER(String fahrerName, int fahrerPunkte, int fahrerNummer){
+        this.fahrerName = fahrerName;
         DRIVER.fahrerPunkte = fahrerPunkte;
         this.fahrerNummer = fahrerNummer;
     }
 
 
     //Setter-Methoden
-    public void setFahrerID(int fahrerID) {
-        this.fahrerID = fahrerID;
-    }
-
-    public void setFahrerVorname(String fahrerVorname) {
-        this.fahrerVorname = fahrerVorname;
-    }
-
-    public void setFahrerNachname(String fahrerNachname) {
-        this.fahrerNachname = fahrerNachname;
+    public void setFahrerName(String fahrerName) {
+        this.fahrerName = fahrerName;
     }
 
     public void setFahrerPunkte(int fahrerPunkte) {
@@ -45,16 +34,8 @@ public class DRIVER {
 
 
     //Getter_Methoden
-    public int getFahrerID() {
-        return fahrerID;
-    }
-
-    public String getFahrerVorname() {
-        return fahrerVorname;
-    }
-
-    public String getFahrerNachname() {
-        return fahrerNachname;
+    public String getFahrerName() {
+        return fahrerName;
     }
 
     public int getFahrerPunkte() {
@@ -68,26 +49,24 @@ public class DRIVER {
 
     public static void fahrerErstellen(){
         System.out.println("Wie viele Fahrer sollen teilnehmen?");
-        int anzahlFaher = scanner.nextInt();
+        int anzahlFahrer = scanner.nextInt();
 
-        DRIVER[] driver = new DRIVER[anzahlFaher];
-        anzahlFaher = anzahlFaher + 1;
+        DRIVER[] driver = new DRIVER[anzahlFahrer];
+        anzahlFahrer = anzahlFahrer + 1;
 
-        for(int i = 1; i < anzahlFaher; i++){
-            System.out.println("Vorname von Fahrer " + i + ":");
-            String vornameFahrer = scanner.next();
-            System.out.println("Nachname von Fahrer " + i + ":");
-            String nachnameFahrer = scanner.next();
+        for(int i = 1; i < anzahlFahrer; i++){
+            System.out.println("Name von Fahrer " + i + ":");
+            String fahrerName = scanner.next();
 
             fahrerPunkte = 0;
 
             System.out.println("Fahrernummer von Fahrer " + i + ":");
             int fahrerNummer = scanner.nextInt();
 
-            driver[i - 1] = new DRIVER(vornameFahrer, nachnameFahrer, fahrerPunkte, fahrerNummer);
+            driver[i - 1] = new DRIVER(fahrerName, fahrerPunkte, fahrerNummer);
+
         }
 
-        System.out.println(java.util.Arrays.toString(driver));
-   }
+    }
 
 }
