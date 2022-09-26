@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/F1/DRIVER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/DRIVER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/F1/POINTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/POINTS.java" afterDir="false" />
-    </list>
+    <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +138,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663925411654</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="initial commit">
+      <created>1664186314826</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664186314826</updated>
+    </task>
+    <task id="LOCAL-00010" summary="initial commit">
+      <created>1664186364055</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664186364055</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,8 +169,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added f1 Package" />
     <MESSAGE value="added Jframe&#10;added tabbedPane" />
-    <MESSAGE value="initial commit" />
     <MESSAGE value="eddit submenue" />
-    <option name="LAST_COMMIT_MESSAGE" value="eddit submenue" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
