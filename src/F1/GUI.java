@@ -33,7 +33,6 @@ public GUI() {
 
 public void InnerTab(int count){
 
-
     tabbedInnerPane = new JTabbedPane(JTabbedPane.LEFT);
     overviewLabel = new JLabel("Overview");
     overviewLabel.setPreferredSize(new Dimension(75, 25));
@@ -61,7 +60,5 @@ public void InnerTab(int count){
 }
 public static void main(String[] args) {
         GUI gui=new GUI();
-
-
     }
 }
