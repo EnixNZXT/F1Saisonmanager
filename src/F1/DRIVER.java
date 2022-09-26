@@ -47,7 +47,7 @@ public class DRIVER {
     }
 
 
-    public static DRIVER[] fahrerErstellen(){
+    public static void fahrerErstellen(){
         System.out.println("Wie viele Fahrer sollen teilnehmen?");
         int anzahlFahrer = scanner.nextInt();
 
@@ -63,13 +63,10 @@ public class DRIVER {
             System.out.println("Fahrernummer von Fahrer " + i + ":");
             int fahrerNummer = scanner.nextInt();
 
-
-            driver[i - 1] = new DRIVER (fahrerName, fahrerPunkte, fahrerNummer);
+            driver[i - 1] = new DRIVER(fahrerName, fahrerPunkte, fahrerNummer);
 
         }
 
-        return driver;
-
-   }
+    }
 
 }
