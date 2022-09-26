@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="eddit submenue">
+    <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/F1/DRIVER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/DRIVER.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/F1/POINTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/POINTS.java" afterDir="false" />
@@ -20,6 +20,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/F1/DRIVER.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/F1/POINTS.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/F1/TRACK.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/F1/main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
