@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f013131d-67eb-4be8-8870-cedc8da4bdd2" name="Changes" comment="eddit submenue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/F1/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/F1/DRIVER.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/DRIVER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/F1/POINTS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/F1/POINTS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +37,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.main">
     <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="F1.GUI" />
       <module name="F1 Saisonmanager" />
@@ -50,8 +51,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="F1.main" />
+      <module name="F1 Saisonmanager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="F1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.GUI" />
       </list>
     </recent_temporary>
@@ -107,7 +122,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663320383536</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="eddit submenue">
+      <created>1663923017169</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663923017169</updated>
+    </task>
+    <task id="LOCAL-00008" summary="eddit submenue">
+      <created>1663925411654</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663925411654</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
