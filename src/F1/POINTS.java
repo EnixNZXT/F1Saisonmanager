@@ -1,5 +1,6 @@
 package F1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import static F1.DRIVER.scanner;
@@ -65,8 +66,8 @@ public class POINTS {
                     value.setFahrerPunkte(punkteZehnter);
                 }
                 default -> {
-                    int punkteFuenfter = value.getFahrerPunkte() + posRest;
-                    value.setFahrerPunkte(punkteFuenfter);
+                    int punkteRest = value.getFahrerPunkte() + posRest;
+                    value.setFahrerPunkte(punkteRest);
                 }
             }
 
@@ -78,6 +79,7 @@ public class POINTS {
     public void ranking(DRIVER[] driver){
         for (DRIVER value : driver) {
             int aktuellerPunktestand = value.getFahrerPunkte();
+
 
 
         }
