@@ -72,15 +72,15 @@ public class POINTS {
 
         }
         System.out.println("Die Punkte wurden erfolgreich aktualisiert!");
+        System.out.println("----------------");
 
     }
     //Zitat Kevin: Darf ich mich mit mir Anal verbinden!? -> Antwort: Hooo jaaaa
     public static void ranking(DRIVER[] driver){
-        Arrays.sort(driver);
+        System.out.println("Neuer Punktestand:");
         for (DRIVER value : driver) {
-            int aktuellerPunktestand = value.getFahrerPunkte();
-            System.out.println(value + "");
-
+            System.out.println("   Fahrer " + value.getFahrerNummer() + " (" + value.getFahrerName() + ") | Punktestand: " + value.getFahrerPunkte());
         }
+        System.out.println("----------------");
     }
 }

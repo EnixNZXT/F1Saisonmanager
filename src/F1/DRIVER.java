@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class DRIVER {
     static Scanner scanner = new Scanner(System.in);
     String fahrerName;
-    static int fahrerPunkte;
+    static int fahrerPunkte = 0;
     int fahrerNummer;
 
 
     //Konstruktor
-    public DRIVER(String fahrerName, int fahrerPunkte, int fahrerNummer){
+    public DRIVER(String fahrerName, int fahrerNummer, int fahrerPunkte){
         this.fahrerName = fahrerName;
-        DRIVER.fahrerPunkte = fahrerPunkte;
         this.fahrerNummer = fahrerNummer;
+        this.fahrerPunkte = fahrerPunkte;
     }
 
 
@@ -25,7 +25,7 @@ public class DRIVER {
     }
 
     public void setFahrerPunkte(int fahrerPunkte) {
-        DRIVER.fahrerPunkte = fahrerPunkte;
+        this.fahrerPunkte = fahrerPunkte;
     }
 
     public void setFahrerNummer(int fahrerNummer) {
@@ -45,23 +45,35 @@ public class DRIVER {
     public int getFahrerNummer() {
         return fahrerNummer;
     }
-    public static void fahrerErstellen(){
+
+
+    public static DRIVER[] fahrerErstellen(){
         System.out.println("Wie viele Fahrer sollen teilnehmen?");
         int anzahlFahrer = scanner.nextInt();
 
         DRIVER[] driver = new DRIVER[anzahlFahrer];
-        anzahlFahrer = anzahlFahrer + 1;
 
-        for(int i = 1; i < anzahlFahrer; i++){
-            System.out.println("Name von Fahrer " + i + ":");
+        for(int i = 0; i < anzahlFahrer; i++){
+            System.out.println("Fahrername:");
             String fahrerName = scanner.next();
 
-            fahrerPunkte = 0;
-
-            System.out.println("Fahrernummer von Fahrer " + i + ":");
+            System.out.println("Fahrernummer:");
             int fahrerNummer = scanner.nextInt();
 
-            driver[i - 1] = new DRIVER(fahrerName, fahrerPunkte, fahrerNummer);
+            System.out.println("----------------\nFahrer wurde angelegt.\n----------------");
+
+            driver[i] = new DRIVER(fahrerName, fahrerNummer, fahrerPunkte);
+
         }
+        System.out.println("Folgende Fahrer wurden erstellt");
+
+        for (DRIVER value : driver) {
+            System.out.println("   Fahrer " + value.getFahrerNummer() + " (" + value.getFahrerName() + ") | Punktestand: " + value.getFahrerPunkte());
+        }
+
+        System.out.println("----------------");
+        return driver;
+
     }
+
 }
