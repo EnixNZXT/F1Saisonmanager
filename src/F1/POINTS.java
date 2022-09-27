@@ -1,7 +1,6 @@
 package F1;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 import static F1.DRIVER.scanner;
 
@@ -76,11 +75,11 @@ public class POINTS {
 
     }
     //Zitat Kevin: Darf ich mich mit mir Anal verbinden!? -> Antwort: Hooo jaaaa
-    public void ranking(DRIVER[] driver){
+    public static void ranking(DRIVER[] driver){
+        Arrays.sort(driver);
         for (DRIVER value : driver) {
             int aktuellerPunktestand = value.getFahrerPunkte();
-
-
+            System.out.println(value + "");
 
         }
     }
