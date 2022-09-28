@@ -11,6 +11,8 @@ public class DRIVER {
     int fahrerNummer;
 
 
+
+
     //Konstruktor
     public DRIVER(String fahrerName, int fahrerNummer, int fahrerPunkte){
         this.fahrerName = fahrerName;
@@ -31,8 +33,6 @@ public class DRIVER {
     public void setFahrerNummer(int fahrerNummer) {
         this.fahrerNummer = fahrerNummer;
     }
-
-
     //Getter_Methoden
     public String getFahrerName() {
         return fahrerName;
@@ -45,8 +45,6 @@ public class DRIVER {
     public int getFahrerNummer() {
         return fahrerNummer;
     }
-
-
     public static DRIVER[] fahrerErstellen(){
         System.out.println("Wie viele Fahrer sollen teilnehmen?");
         int anzahlFahrer = scanner.nextInt();
