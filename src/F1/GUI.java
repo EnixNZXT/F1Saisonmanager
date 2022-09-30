@@ -112,16 +112,12 @@ public void InnerTab(int count){
             driverText+=json;
         }
         bufferedReader.close();
-        String[] ary=driverText.split("[{,:}]");
-        int i=0;
-        System.out.println(ary[0]);
-        System.out.println(ary[1]);
-        System.out.println(ary[2]);
+        String[] array =driverText.split("[{,:}]");
 
-        System.out.println(ary[9]);
-        System.out.println(ary[8]);
-        System.out.println(ary[10]);
-        System.out.println(ary[11]);
+        for (int i=2; i<= array.length-1;i+=2){
+            System.out.println(array[i]);
+        }
+
 
 
 
