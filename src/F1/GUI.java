@@ -3,6 +3,8 @@ package F1;
 import org.json.*;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.*;
 
 
@@ -11,6 +13,7 @@ public class GUI extends JFrame {
     JTabbedPane tabbedOuterPane;
     JTabbedPane tabbedInnerPane;
     JLabel tabTitelLabel;
+    JButton driverReadButton, driverWriteButton;
     JTable driverTable;
     JScrollPane driverPane;
     JLabel overviewLabel,driverLabel,teamLabel,trackLabel;
@@ -54,17 +57,17 @@ public GUI() throws IOException {
     window.setLocationRelativeTo(null);
     window.setResizable(true);
 
+
     //tab pane
     tabbedOuterPane = new JTabbedPane();
     count=2022;
-    ReadJson();
-    do {
 
+    do {
         InnerTab(count);
         count++;
     }while (count<=2030);
     window.setVisible(true);
-    WriteJson();
+
 
 }
 
@@ -81,6 +84,31 @@ public void InnerTab(int count){
 
     driverTable = new JTable(data,column);
     driverPane = new JScrollPane(driverTable);
+    driverReadButton = new JButton("Read");
+    driverWriteButton=new JButton("Write");
+    driverReadButton.setPreferredSize(new Dimension(100,100));
+    driverWriteButton.setPreferredSize(new Dimension(100,100));
+    driverReadButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            try {
+                ReadJson();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        }
+    });
+    driverWriteButton.addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            WriteJson();
+        }
+    });
+    JPanel driverframe=new JPanel();
+    driverframe.add(driverPane);
+    driverframe.add(driverReadButton);
+    driverframe.add(driverWriteButton);
+
 
 
     teamLabel = new JLabel("Teams");
@@ -92,7 +120,7 @@ public void InnerTab(int count){
 
     tabbedInnerPane.addTab("", overviewTextArea);
     tabbedInnerPane.setTabComponentAt(tabbedInnerPane.getTabCount() - 1, overviewLabel);
-    tabbedInnerPane.addTab("",driverPane);
+    tabbedInnerPane.addTab("",driverframe);
     tabbedInnerPane.setTabComponentAt(tabbedInnerPane.getTabCount() - 1, driverLabel);
 
     tabbedInnerPane.addTab("", teamTextArea);
@@ -105,7 +133,7 @@ public void InnerTab(int count){
     window.add(tabbedOuterPane);
 }
     public void ReadJson() throws IOException {
-        String filePath = "src/F1/driver.json";
+        String filePath = "src/F1/driver"+count+".json";
         BufferedReader bufferedReader=new BufferedReader(new FileReader(filePath));
         String json;
         while ((json=bufferedReader.readLine())!=null){
@@ -115,6 +143,7 @@ public void InnerTab(int count){
         String[] array =driverText.split("[{,:}]");
 
         for (int i=2; i<= array.length-1;i+=2){
+
             System.out.println(array[i]);
         }
 
@@ -126,7 +155,7 @@ public void InnerTab(int count){
 
     }
 public void WriteJson(){
-    String filePath = "src/F1/driver.json";
+    String filePath = "src/F1/driver"+count+".json";
     JSONArray arr = new JSONArray();
     try(FileWriter fw = new FileWriter(filePath)){
         boolean firstRow=true;
@@ -150,5 +179,6 @@ public void WriteJson(){
 
 public static void main(String[] args) throws IOException {
         GUI gui=new GUI();
+
     }
 }
